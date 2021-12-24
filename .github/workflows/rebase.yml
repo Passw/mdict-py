@@ -24,8 +24,8 @@ jobs:
         git remote set-url origin https://x-access-token:${GITHUB_TOKEN}@github.com/${GITHUB_REPOSITORY}.git
         git remote -vv
         git branch -vv
-    - name: RUN `git pull master -r`
+    - name: RUN `git pull main -r`
       run: |
         git remote add up https://github.com/zhimoe/mdict-py.git
-        git pull up master -r
-        git push origin HEAD:master --force
+        git pull up main -r
+        git push origin HEAD:main --force
